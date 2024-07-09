@@ -23,8 +23,9 @@ const BioSection = () => {
   return (
     <section className='bio-container'>
       <div className='header'>
-        <h1 className='main-title'>Hi, I’m Bryan</h1>
+        {/* <h1 className='main-title'>Hi, I’m Bryan</h1> */}
         <p className='main-description'>
+          <h1 className='main-title'>Hi, I’m Bryan</h1>
           I'm a developer and visual storyteller, passionate about
           problem-solving and creating, whether through code or photography.
           Tell me your story, and I'll tell you mine!
@@ -50,6 +51,10 @@ const TextSection = () => {
   return (
     <section className='text-box'>
       <div className='text-section-margin-top'>
+        I'm seeking <strong>2025</strong> new grad opportunities!{" "}
+        <strong>Let's chat</strong>.
+      </div>
+      <div className='text-section-margin-top'>
         <strong>Currently</strong>, I’m doing a summer internship placement as a
         Backend Engineer at <strong>Faire</strong> before I enter my final year
         of Computer Science at <strong>UBC</strong>.
@@ -64,10 +69,6 @@ const TextSection = () => {
             Fullstack Engineer at the <strong>Brinkman Lab</strong>
           </li>
         </ul>
-      </div>
-      <div className='text-section-margin-top'>
-        I'm seeking <strong>2025</strong> new grad opportunities!{" "}
-        <strong>Let's chat</strong>.
       </div>
     </section>
   );
