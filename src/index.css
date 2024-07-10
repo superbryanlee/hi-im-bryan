@@ -15,7 +15,7 @@ a, span.my-frames {
   text-decoration: inherit;
 }
 a:hover, span.my-frames:hover {
-  color: #323cf2;
+  color: #FFDB58;
   cursor: pointer;
 }
 
@@ -46,8 +46,9 @@ body {
     color: #213547;
     background-color: #ffffff;
   }
-  a:hover {
-    color: #747bff;
+  a:hover, span.my-frames:hover {
+    color: #f5c20c;
+    cursor: pointer;
   }
   button {
     background-color: #f9f9f9;
