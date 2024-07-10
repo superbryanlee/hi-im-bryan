@@ -9,13 +9,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
+a, span.my-frames {
   color: #646cff;
   font-weight: 700;
   text-decoration: inherit;
 }
-a:hover {
-  color: #535bf2;
+a:hover, span.my-frames:hover {
+  color: #323cf2;
+  cursor: pointer;
 }
 
 /* Default light mode styles */
@@ -24,9 +25,9 @@ body {
   background-color: white;
   margin-top: 45px;
   display: flex;
-  place-items: center;
+  place-items: top;
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 200vh;
 }
 
 /* Dark mode styles */
@@ -34,6 +35,25 @@ body {
   body {
     color: white;
     background-color: #000000;
+  }
+  .photography-section:hover {
+    background-color: #1e1d1d;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+  .photography-section:hover {
+    background-color: #F3F3F3;
   }
 }
 
@@ -61,21 +81,10 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
+
 
 .main-container {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, rgb(51, 51, 51)ui, Avenir, Helvetica, Arial, sans-serif;
   width: 45vw;
   display: flex;
   flex-direction: column;
@@ -133,10 +142,12 @@ button:focus-visible {
 }
 
 .text-section-margin-top {
+  padding:15px;
   margin-top: 45px;
 }
 
 .text-section-margin-bottom {
+  padding:15px;
   margin-bottom: 45px;
 }
 
@@ -147,6 +158,11 @@ button:focus-visible {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
+  padding: 15px;
+}
+
+img.frame {
+  margin-top: 15px;
 }
 
 @media (max-width: 1300px) and (min-width: 1101px) {
@@ -200,17 +216,17 @@ button:focus-visible {
     text-align: left;
   }
 
-  .photography-section {
-    margin-top: 0px;
+  img.frame {
+    margin-top: 10px;
   }
 
-  .text-section-margin-top,
-  .text-section-margin-bottom {
+  .text-section-margin-top {
     margin-top: 15px;
+  }
+  .text-section-margin-bottom {
     margin-bottom: 15px;
   }
 }
-
 
 
 
