@@ -19,13 +19,20 @@ export const PhotographySection = () => {
       </div>
       {isOpen ? (
         <>
+          <img className='frame' src='/photography/000914930036.jpg'></img>
+          <img className='frame' src='/photography/000816370009.jpg'></img>
+          <img className='frame' src='/photography/0014.jpg'></img>
           <img
             className='frame'
-            src='public/photography/000914930036.jpg'
+            src='/photography/2024-06-05_16-00-42_525.jpeg'
           ></img>
           <img
             className='frame'
-            src='public/photography/000816370009.jpg'
+            src='/photography/2024-06-18_13-43-08_987.jpeg'
+          ></img>
+          <img
+            className='frame'
+            src='/photography/2024-06-18_13-43-13_627.jpeg'
           ></img>
         </>
       ) : null}

@@ -23,11 +23,11 @@ a:hover, span.my-frames:hover {
 body {
   color: #000000;
   background-color: white;
-  margin-top: 45px;
+  margin-top: 0px;
   display: flex;
   place-items: top;
   min-width: 320px;
-  min-height: 200vh;
+  min-height: 100vh;
 }
 
 /* Dark mode styles */
@@ -95,6 +95,7 @@ button:focus-visible {
 .bio-container {
   display: flex;
   flex-direction: row;
+  padding: 15px
 }
 
 .header {
@@ -106,9 +107,9 @@ button:focus-visible {
 .main-title {
   font-size: 48px;
   font-weight: 800;
-  /* background-color: #646cff; */
   text-align: left;
-  margin: 0;
+  margin: 0px;
+  padding-bottom: 15px;
 }
 
 .main-description {
@@ -121,8 +122,8 @@ button:focus-visible {
 
 .profile-picture {
   object-fit: cover;
-  width: 290px;
-  height: 290px;
+  width: 275px;
+  height: 275px;
   margin-top: 8px;
 }
 
@@ -144,22 +145,23 @@ button:focus-visible {
 
 .text-section-margin-top {
   padding:15px;
-  margin-top: 45px;
 }
 
 .text-section-margin-bottom {
   padding:15px;
-  margin-bottom: 45px;
 }
 
 .photography-section {
   font-size: 24px;
   font-weight: 500;
   text-align: left;
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   padding: 15px;
+}
+
+ul {
+  margin: 0px; 
 }
 
 img.frame {
@@ -222,10 +224,10 @@ img.frame {
   }
 
   .text-section-margin-top {
-    margin-top: 15px;
+    margin-top: 0px;
   }
   .text-section-margin-bottom {
-    margin-bottom: 15px;
+    margin-bottom: 0px;
   }
 }
 
