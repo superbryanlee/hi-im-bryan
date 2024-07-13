@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <BrowserRouter basename='/hi-im-bryan/'>
+    <BrowserRouter basename='/hi-im-bryan'>
       <Routes>
         <Route path='*' element={<App />} />
       </Routes>
