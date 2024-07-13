@@ -5,6 +5,7 @@ import {
   IconBrandLinkedin,
   IconMail,
 } from "@tabler/icons-react";
+import React from "react";
 
 export const BioSection = () => {
   return (
@@ -45,7 +46,7 @@ export const BioSection = () => {
         <Tooltip title="That's me!" followCursor>
           <img
             className='profile-picture'
-            src='/head-shot.jpeg'
+            src='public/head-shot.jpeg'
             alt='Profile'
           />
         </Tooltip>

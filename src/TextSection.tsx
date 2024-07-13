@@ -1,3 +1,5 @@
+import React from "react";
+
 export const TextSection = () => {
   return (
     <section className='text-box'>
