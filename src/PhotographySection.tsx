@@ -1,4 +1,6 @@
 import { useState } from "react";
+// import { CSSTransition } from "react-transition-group";
+// import './photography-section.css';
 
 export const PhotographySection = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,14 +9,14 @@ export const PhotographySection = () => {
     <section className='photography-section'>
       <div>
         I'm a casual cinephile and also <strong>love</strong> film and digital
-        photography. Here are some of my favourite{" "}
+        photography. Here are some{" "}
         <span
           onClick={() => {
             setIsOpen(!isOpen);
           }}
           className='my-frames'
         >
-          frames...
+          photos I've taken...
         </span>
       </div>
       {isOpen ? (
@@ -34,6 +36,7 @@ export const PhotographySection = () => {
             className='frame'
             src='/photography/2024-06-18_13-43-13_627.jpeg'
           ></img>
+          <img className='frame' src='/photography/DSCF3383.JPG'></img>
         </>
       ) : null}
     </section>

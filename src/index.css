@@ -39,6 +39,9 @@ body {
   .photography-section:hover {
     background-color: #1e1d1d;
   }
+  .photography-section:hover, .previously:hover, .currently:hover, .seeking:hover  {
+    background-color: #1e1d1d;
+  }
 }
 
 @media (prefers-color-scheme: light) {
@@ -53,7 +56,7 @@ body {
   button {
     background-color: #f9f9f9;
   }
-  .photography-section:hover {
+  .photography-section:hover, .previously:hover, .currently:hover, .seeking:hover {
     background-color: #F3F3F3;
   }
 }
@@ -81,8 +84,6 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-
-
 
 .main-container {
   font-family: Inter, rgb(51, 51, 51)ui, Avenir, Helvetica, Arial, sans-serif;
@@ -118,6 +119,10 @@ button:focus-visible {
   text-align: left;
   margin-top: 0px;
 }
+
+/* .previously, .currently, .seeking {
+  border-radius: 18px;
+} */
 
 
 .profile-picture {
@@ -157,7 +162,9 @@ button:focus-visible {
   text-align: left;
   display: flex;
   flex-direction: column;
+  /* flex-wrap: wrap; */
   padding: 15px;
+  /* border-radius: 20px; */
 }
 
 ul {
@@ -165,7 +172,8 @@ ul {
 }
 
 img.frame {
-  margin-top: 15px;
+  max-width: 100%;
+  margin: 15px;
 }
 
 @media (max-width: 1300px) and (min-width: 1101px) {
@@ -219,8 +227,15 @@ img.frame {
     text-align: left;
   }
 
+  .photography-section {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 0px
+  }
+
   img.frame {
     margin-top: 10px;
+    max-width: 100%;
   }
 
   .text-section-margin-top {
