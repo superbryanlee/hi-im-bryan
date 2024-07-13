@@ -1,5 +1,4 @@
 import { useState } from "react";
-import React from "react";
 export const PhotographySection = () => {
   const [isOpen, setIsOpen] = useState(false);
 

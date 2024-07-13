@@ -5,7 +5,6 @@ import {
   IconBrandLinkedin,
   IconMail,
 } from "@tabler/icons-react";
-import React from "react";
 
 export const BioSection = () => {
   return (
