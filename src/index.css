@@ -247,4 +247,28 @@ img.frame {
 }
 
 
+@media (max-width: 430px) {
+  .main-title {
+    font-size: 2em;
+    text-align: left;
+    margin: 0;
+    padding-bottom: 10px;
+  }
+
+  .main-description {
+    font-size: 1em;
+  }
+
+  .profile-picture {
+    object-fit: cover;
+    width: 130px;
+    height: 130px;
+  }
+
+  .text-box,
+  .photography-section {
+    font-size: 1em;
+    text-align: left;
+  }
+}
 
