@@ -20,7 +20,7 @@ export const PhotographySection = () => {
         <>
           <img className='frame' src='photography/000914930036.jpg'></img>
           <img className='frame' src='photography/000816370009.jpg'></img>
-          <img className='frame' src='public/photography/0014.jpg'></img>
+          <img className='frame' src='photography/0014.jpg'></img>
           <img
             className='frame'
             src='photography/2024-06-05_16-00-42_525.jpeg'
@@ -33,7 +33,7 @@ export const PhotographySection = () => {
             className='frame'
             src='photography/2024-06-18_13-43-13_627.jpeg'
           ></img>
-          <img className='frame' src='public/photography/DSCF3383.JPG'></img>
+          <img className='frame' src='photography/DSCF3383.JPG'></img>
         </>
       ) : null}
     </section>
