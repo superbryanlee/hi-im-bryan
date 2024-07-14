@@ -43,11 +43,7 @@ export const BioSection = () => {
       </div>
       <div className='profile-container'>
         <Tooltip title="That's me!" followCursor>
-          <img
-            className='profile-picture'
-            src='public/head-shot.jpeg'
-            alt='Profile'
-          />
+          <img className='profile-picture' src='head-shot.jpeg' alt='Profile' />
         </Tooltip>
       </div>
     </section>
