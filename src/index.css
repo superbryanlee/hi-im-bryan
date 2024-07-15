@@ -26,8 +26,7 @@ body {
   margin-top: 0px;
   display: flex;
   place-items: top;
-  min-width: 320px;
-  min-height: 100vh;
+  width: 100%;
 }
 
 /* Dark mode styles */
@@ -174,6 +173,7 @@ ul {
 img.frame {
   max-width: 100%;
   margin: 15px;
+  height: auto;
 }
 
 @media (max-width: 1300px) and (min-width: 1101px) {
