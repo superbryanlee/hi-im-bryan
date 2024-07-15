@@ -172,7 +172,6 @@ ul {
 
 img.frame {
   max-width: 100%;
-  margin: 15px;
   height: auto;
 }
 
@@ -231,11 +230,6 @@ img.frame {
     flex-direction: column;
     flex-wrap: nowrap;
     margin: 0px
-  }
-
-  img.frame {
-    margin-top: 10px;
-    max-width: 100%;
   }
 
   .text-section-margin-top {
