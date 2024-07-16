@@ -26,8 +26,8 @@ body {
   margin-top: 0px;
   display: flex;
   place-items: top;
-  position: absolute;
   width: 100%;
+  min-height: -webkit-fill-available;
 }
 
 /* Dark mode styles */
