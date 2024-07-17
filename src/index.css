@@ -276,6 +276,18 @@ img.frame {
   .photography-section {
     font-size: 1em;
     text-align: left;
+    margin: 0px;
+  }
+
+  .text-section-margin-top {
+    margin-top: 0px;
+  }
+  .text-section-margin-bottom {
+    margin-bottom: 0px;
+  }
+
+  .bio-container {
+    padding-bottom: 0px;;
   }
 }
 
@@ -286,13 +298,18 @@ img.frame {
     margin: 0;
     padding-bottom: 5px;
   }
+  
+  .bio-container {
+    padding-bottom: 0px;;
+  }
 
   .header {
     margin-right: 12px;
   }
 
   .main-description {
-    font-size: 0.9em;
+    font-size: 0.8em;
+    margin-bottom: 0px;
   }
 
   .profile-picture {
@@ -304,8 +321,16 @@ img.frame {
 
   .text-box,
   .photography-section {
-    font-size: 0.9em;
+    font-size: 0.8em;
     text-align: left;
+    margin: 0px;
+  }
+
+  .text-section-margin-top {
+    margin-top: 0px;
+  }
+  .text-section-margin-bottom {
+    margin-bottom: 0px;
   }
 }
 
