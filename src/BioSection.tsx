@@ -21,22 +21,22 @@ export const BioSection = () => {
         <div className='header-links'>
           <Tooltip title='Link with me!' followCursor>
             <a href='https://www.linkedin.com/in/bryanleeubc/'>
-              <IconBrandLinkedin size={42} />
+              <IconBrandLinkedin size={35} />
             </a>
           </Tooltip>
           <Tooltip title='bryanlee.fh@gmail.com' followCursor>
             <a href='mailto:bryanlee.fh@gmail.com'>
-              <IconMail size={42} />
+              <IconMail size={35} />
             </a>
           </Tooltip>
           <Tooltip title='@framesbybry' followCursor>
             <a href='https://www.instagram.com/framesbybry/'>
-              <IconBrandInstagram size={42} />
+              <IconBrandInstagram size={35} />
             </a>
           </Tooltip>
           <Tooltip title='beep boop code' followCursor>
             <a href='https://github.com/superbryanlee'>
-              <IconBrandGithub size={42} />
+              <IconBrandGithub size={35} />
             </a>
           </Tooltip>
         </div>
