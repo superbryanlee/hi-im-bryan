@@ -185,12 +185,15 @@ img.frame {
 .image-container {
   opacity: 0;
   transform: translateY(5px);
+  max-height: 0;
+  overflow: hidden;
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .image-container.fade-in {
   opacity: 1;
   transform: translateY(0);
+  max-height: 1000px; /* A large enough value to accommodate the images */
 }
 
 
