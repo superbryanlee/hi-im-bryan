@@ -2,7 +2,7 @@ export const TextSection = () => {
   return (
     <section className='text-box'>
       <div className='text-section-margin-top seeking'>
-        I'm seeking <strong>2025</strong> new grad & internship opportunities!{" "}
+        I'm seeking <strong>2025</strong> new grad opportunities!{" "}
         <a href='https://www.linkedin.com/in/bryanleeubc/'>Let's chat</a>.
       </div>
       <div className='text-section-margin-top currently'>

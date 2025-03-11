@@ -116,10 +116,15 @@ button:focus-visible {
 }
 
 .main-description {
-  font-size: 24px;
   font-weight: 600;
   text-align: left;
   margin-top: 0px;
+}
+
+.main-description,
+.text-box,
+.photography-section {
+  font-size: 18px;
 }
 
 /* .previously, .currently, .seeking {
@@ -141,7 +146,6 @@ button:focus-visible {
 
 .text-box {
   margin-top: 20px;
-  font-size: 24px;
   font-weight: 500;
   text-align: left;
 }
@@ -159,7 +163,6 @@ button:focus-visible {
 }
 
 .photography-section {
-  font-size: 24px;
   font-weight: 500;
   text-align: left;
   display: flex;
@@ -218,10 +221,11 @@ img.frame {
     padding-bottom: 15px;
   }
 
-  .main-description {
-    font-size: 1.25em;
+  .main-description,
+  .text-box,
+  .photography-section {
+    font-size: 1em;
   }
-
   .profile-picture {
     object-fit: cover;
     width: 190px;
@@ -230,7 +234,6 @@ img.frame {
 
   .text-box,
   .photography-section {
-    font-size: 1.25em;
     text-align: left;
   }
 
@@ -249,7 +252,7 @@ img.frame {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 620px) {
   .main-title {
     font-size: 2em;
     text-align: left;
@@ -261,7 +264,9 @@ img.frame {
     margin-right: 15px;
   }
   
-  .main-description {
+  .main-description,
+  .text-box,
+  .photography-section {
     font-size: 1em;
   }
 
@@ -274,7 +279,6 @@ img.frame {
 
   .text-box,
   .photography-section {
-    font-size: 1em;
     text-align: left;
     margin: 0px;
   }
@@ -291,7 +295,18 @@ img.frame {
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 570px) {
+  .main-description,
+  .text-box,
+  .photography-section {
+    font-size: 0.8em;
+  }
+
+}
+
+
+
+@media (max-width: 480px) {
   .main-title {
     font-size: 1.5em;
     text-align: left;
@@ -308,8 +323,13 @@ img.frame {
   }
 
   .main-description {
-    font-size: 0.8em;
     margin-bottom: 0px;
+  }
+
+  .main-description,
+  .text-box,
+  .photography-section {
+    font-size: 0.5em;
   }
 
   .profile-picture {
@@ -321,7 +341,6 @@ img.frame {
 
   .text-box,
   .photography-section {
-    font-size: 0.8em;
     text-align: left;
     margin: 0px;
   }
