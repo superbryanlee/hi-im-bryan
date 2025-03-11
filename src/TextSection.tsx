@@ -7,7 +7,9 @@ export const TextSection = () => {
       </div>
       <div className='text-section-margin-top currently'>
         <strong>Currently</strong>, I'm wrapping up my final year of Computer
-        Science at <a href='https://www.ubc.ca/'>UBC</a>.
+        Science at <a href='https://www.ubc.ca/'>UBC</a>.<br></br>
+        I've also completed a BSc. in Microbiology & Immunology with a Minor in
+        Psychology, also at <a href='https://www.ubc.ca/'>UBC</a>.
       </div>
       <div className='text-section-margin-top previously'>
         <strong>Previously</strong>, I’ve done internships as a:
