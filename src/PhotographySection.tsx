@@ -21,10 +21,14 @@ export const PhotographySection = () => {
       "photography/000914930036.jpg",
       "photography/000816370009.jpg",
       "photography/0014.jpg",
+      "photography/NYC_3.JPG",
       "photography/2024-06-05_16-00-42_525.jpeg",
       "photography/2024-06-18_13-43-08_987.jpeg",
       "photography/2024-06-18_13-43-13_627.jpeg",
+      "photography/NYC_4.JPG",
       "photography/DSCF3383.JPG",
+      "photography/NYC_1.JPG",
+      "photography/NYC_2.JPG",
     ],
     []
   );
