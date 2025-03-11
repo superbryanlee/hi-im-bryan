@@ -3,11 +3,18 @@ import { Gallery } from "react-grid-gallery";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
+type GalleryImage = {
+  src: string;
+  original: string;
+  width: number;
+  height: number;
+};
+
 export const PhotographySection = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [imagesLoaded, setImagesLoaded] = useState(false);
-  const [galleryImages, setGalleryImages] = useState([]);
-  const [lightboxIndex, setLightboxIndex] = useState(-1); // Track clicked image index
+  const [galleryImages, setGalleryImages] = useState<GalleryImage[]>([]);
+  const [lightboxIndex, setLightboxIndex] = useState(-1);
 
   const imageSources = useMemo(
     () => [
@@ -26,13 +33,13 @@ export const PhotographySection = () => {
     const preloadImages = async () => {
       const loadedImages = await Promise.all(
         imageSources.map((src) => {
-          return new Promise((resolve) => {
+          return new Promise<GalleryImage | null>((resolve) => {
             const img = new Image();
             img.src = src;
             img.onload = () =>
               resolve({
                 src,
-                original: src, // Lightbox needs `original`
+                original: src,
                 width: img.width || 300,
                 height: img.height || 200,
               });
@@ -41,7 +48,11 @@ export const PhotographySection = () => {
         })
       );
 
-      const validImages = loadedImages.filter(Boolean);
+      // Filter out null values and cast to GalleryImage[]
+      const validImages: GalleryImage[] = loadedImages.filter(
+        (image): image is GalleryImage => image !== null
+      );
+
       setGalleryImages(validImages);
       setImagesLoaded(true);
     };
@@ -49,7 +60,6 @@ export const PhotographySection = () => {
     preloadImages();
   }, [imageSources]);
 
-  // Convert images for Lightbox format
   const slides = galleryImages.map(({ src, width, height }) => ({
     src,
     width,
@@ -60,8 +70,8 @@ export const PhotographySection = () => {
     <>
       <section className='photography-section'>
         <div>
-          I'm also <strong>love</strong> film & digital photography. Here are
-          some{" "}
+          I'm a casual cinephile and also <strong>love</strong> film and digital
+          photography. Here are some{" "}
           <span onClick={() => setIsOpen(!isOpen)} className='my-frames'>
             photos I've taken...
           </span>
@@ -74,11 +84,10 @@ export const PhotographySection = () => {
           <Gallery
             images={galleryImages}
             enableImageSelection={false}
-            onClick={(index) => setLightboxIndex(index)} // Open Lightbox
+            onClick={(index) => setLightboxIndex(index)}
           />
         )}
       </div>
-      {/* Lightbox Component */}
       <Lightbox
         slides={slides}
         open={lightboxIndex >= 0}
