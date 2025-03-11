@@ -1,8 +1,13 @@
 import { useState, useEffect, useMemo } from "react";
+import { Gallery } from "react-grid-gallery";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 
 export const PhotographySection = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [imagesLoaded, setImagesLoaded] = useState(false);
+  const [galleryImages, setGalleryImages] = useState([]);
+  const [lightboxIndex, setLightboxIndex] = useState(-1); // Track clicked image index
 
   const imageSources = useMemo(
     () => [
@@ -19,21 +24,37 @@ export const PhotographySection = () => {
 
   useEffect(() => {
     const preloadImages = async () => {
-      await Promise.all(
+      const loadedImages = await Promise.all(
         imageSources.map((src) => {
           return new Promise((resolve) => {
             const img = new Image();
             img.src = src;
-            img.onload = resolve;
-            img.onerror = resolve;
+            img.onload = () =>
+              resolve({
+                src,
+                original: src, // Lightbox needs `original`
+                width: img.width || 300,
+                height: img.height || 200,
+              });
+            img.onerror = () => resolve(null);
           });
         })
       );
+
+      const validImages = loadedImages.filter(Boolean);
+      setGalleryImages(validImages);
       setImagesLoaded(true);
     };
 
     preloadImages();
   }, [imageSources]);
+
+  // Convert images for Lightbox format
+  const slides = galleryImages.map(({ src, width, height }) => ({
+    src,
+    width,
+    height,
+  }));
 
   return (
     <>
@@ -46,12 +67,24 @@ export const PhotographySection = () => {
           </span>
         </div>
       </section>
-      <div className={`image-container ${isOpen ? "fade-in" : ""}`}>
-        {imagesLoaded &&
-          imageSources.map((src, index) => (
-            <img key={index} className='frame' src={src} />
-          ))}
+      <div
+        className={`image-container ${isOpen && imagesLoaded ? "fade-in" : ""}`}
+      >
+        {imagesLoaded && (
+          <Gallery
+            images={galleryImages}
+            enableImageSelection={false}
+            onClick={(index) => setLightboxIndex(index)} // Open Lightbox
+          />
+        )}
       </div>
+      {/* Lightbox Component */}
+      <Lightbox
+        slides={slides}
+        open={lightboxIndex >= 0}
+        index={lightboxIndex}
+        close={() => setLightboxIndex(-1)}
+      />
     </>
   );
 };
