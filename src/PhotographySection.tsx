@@ -25,7 +25,7 @@ export const PhotographySection = () => {
             const img = new Image();
             img.src = src;
             img.onload = resolve;
-            img.onerror = resolve; // Prevents blocking on error
+            img.onerror = resolve;
           });
         })
       );
@@ -33,24 +33,25 @@ export const PhotographySection = () => {
     };
 
     preloadImages();
-  }, [imageSources]); // imageSources is now stable
+  }, [imageSources]);
 
   return (
-    <section className='photography-section'>
-      <div>
-        I'm a casual cinephile and also <strong>love</strong> film and digital
-        photography. Here are some{" "}
-        <span onClick={() => setIsOpen(!isOpen)} className='my-frames'>
-          photos I've taken...
-        </span>
-      </div>
-      {isOpen && imagesLoaded && (
-        <>
-          {imageSources.map((src, index) => (
+    <>
+      <section className='photography-section'>
+        <div>
+          I'm a casual cinephile and also <strong>love</strong> film and digital
+          photography. Here are some{" "}
+          <span onClick={() => setIsOpen(!isOpen)} className='my-frames'>
+            photos I've taken...
+          </span>
+        </div>
+      </section>
+      <div className={`image-container ${isOpen ? "fade-in" : ""}`}>
+        {imagesLoaded &&
+          imageSources.map((src, index) => (
             <img key={index} className='frame' src={src} />
           ))}
-        </>
-      )}
-    </section>
+      </div>
+    </>
   );
 };
