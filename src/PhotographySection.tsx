@@ -60,8 +60,8 @@ export const PhotographySection = () => {
     <>
       <section className='photography-section'>
         <div>
-          I'm a casual cinephile and also <strong>love</strong> film and digital
-          photography. Here are some{" "}
+          I'm also <strong>love</strong> film & digital photography. Here are
+          some{" "}
           <span onClick={() => setIsOpen(!isOpen)} className='my-frames'>
             photos I've taken...
           </span>
