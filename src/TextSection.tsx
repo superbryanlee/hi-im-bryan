@@ -1,4 +1,16 @@
+import {
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  Typography,
+} from "@mui/material";
+import { grey } from "@mui/material/colors";
+import React from "react";
+import { useState } from "react";
+
 export const TextSection = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <section className='text-box'>
       <div className='text-section-margin-top seeking'>
@@ -25,7 +37,25 @@ export const TextSection = () => {
             <a href='https://www.brinkman.mbb.sfu.ca/'>Brinkman Lab</a>
           </li>
         </ul>
+        {/* <br></br>
+        <div>
+          Here are some{" "}
+          <span onClick={() => setIsOpen(!isOpen)} className='my-frames'>
+            projects I've worked on...
+          </span>
+        </div> */}
       </div>
+      {/* <div className={`project-container ${isOpen ? "fade-in" : ""}`}>
+        <ul className='project-items'>
+          <li>Mark as Unread</li>
+          <li>CHILDdb-Elasticsearch Integration</li>
+          <li>UBC Campus Explorer (CPSC 310)</li>
+          <li>Hotel Management Database Management Software (CPSC 304)</li>
+          <li>MyFilms</li>
+          <li>Restaurant Roulette: I'm Feeling Hungry (BCSHacks)</li>
+          <li>RegVaxBC (nwHacks)</li>
+        </ul>
+      </div> */}
     </section>
   );
 };
